@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send("Backend setup");
+const User = require('../models/User');
+
+router.get('/', async (req, res) => {
+    const data = await User.find();
+    res.send(data);
 });
 
 module.exports = router;
