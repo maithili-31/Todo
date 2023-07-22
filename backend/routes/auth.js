@@ -26,4 +26,25 @@ router.post('/login', async (req, res) => {
 
 });
 
+router.post('/createuser', async (req, res) => {
+    let success = false;
+    try {
+        const {email, username, password} = req.body;
+        if (!email || !password || !username) {
+            success = false;
+            res.status(400).json({success, error: "Invalid data"});
+        }
+
+        success = true;
+        let data = new User(req.body);
+        let result = await data.save();
+        console.log(result);
+        res.json({success, result});
+    }
+    catch (error) {
+        success = false;
+        res.status(500).send("Internal Server Error");
+    }
+});
+
 module.exports = router;

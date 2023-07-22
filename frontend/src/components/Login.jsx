@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import {Link} from "react-router-dom";
 
 function Login(){
-    function handleSubmit(e){
+    async function handleSubmit(e){
         e.preventDefault();
         console.log(e.target.email.value);
         console.log(e.target.pass.value);

@@ -3,7 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 const connectDB = require('./db');
-const listRoute = require('./routes/list');
+const notes = require('./routes/notes');
 const auth = require('./routes/auth');
 
 const app = express();
@@ -13,7 +13,7 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-app.use('/notes', listRoute);
+app.use('/notes', notes);
 app.use('/auth', auth);
 
 app.listen(PORT, () => {
