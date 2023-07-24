@@ -5,6 +5,7 @@ import './App.css'
 import Login from './components/Login'
 import AddNote from './components/AddNote'
 import Home from './components/Home'
+import EditTask from './components/EditTask'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       {/* <Login/> */}
       {/* <AddNote/> */}
       <Home/>
+      <EditTask/>
     </>
   )
 }

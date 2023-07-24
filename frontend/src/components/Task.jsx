@@ -1,13 +1,6 @@
 import React from "react";
 
 function Task(props){
-    function funEdit(){
-        
-    }
-
-    function funDelete(){
-
-    }
     return(
         <div style={{border: "2px solid white"}}>
             <label>Title : </label>
@@ -15,8 +8,8 @@ function Task(props){
             <label>Description : </label>
             <div name="dtn" >{props.dtn}</div>
             <br></br>
-            <button onClick={funEdit}>Edit</button>
-            <button onClick={funDelete}>Delete</button>
+            <button>Edit</button>
+            <button>Delete</button>
         </div>
     )
 }

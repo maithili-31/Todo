@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
-function AddNote(){
-    function handlesubmit(e){
-        e.preventDefault();
+function EditTask(){
+    function handleEdit(e){
+        preventDefault();
         console.log(e.target.title.value);
         console.log(e.target.description.value);
     }
 
     return(
-        <>
-            <form onSubmit={handlesubmit}>
-                <h1>Add Note</h1>
+        <div>
+            <form onSubmit={handleEdit}>
+                <h1>Edit Note</h1>
                 <label>Title: </label>
                 <input type="text" name="title" placeholder="Title" />
                 <br></br>
@@ -19,8 +19,10 @@ function AddNote(){
                 <br></br>
                 <button type="submit">Submit</button>
             </form>
-        </>
+        </div>
     )
 }
 
-export default AddNote;
+export default EditTask;
+
+// https://reactrouter.com/en/main/router-components/browser-router
